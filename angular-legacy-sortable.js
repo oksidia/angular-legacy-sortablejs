@@ -71,10 +71,15 @@
 						var getSource = function getSource() {
 							return itemsExpr(scope.$parent) || [];
 						};
-
+						
+						var options = scope.ngSortable || {};
+						for (const key in ngSortableConfig) {
+							if (! ngSortableConfig.hasOwnProperty(key)) continue;
+							if (typeof options[key] !== 'undefined') continue;
+							options[key] = ngSortableConfig[key];
+						}
 
 						var el = $el[0],
-							options = angular.extend(scope.ngSortable || {}, ngSortableConfig),
 							watchers = [],
 							offDestroy,
 							sortable
