@@ -1,7 +1,7 @@
 {
-  "name": "angular-legacy-sortablejs-maintained",
+  "name": "angular-legacy-sortablejs-maintained-oks",
   "version": "0.6.0",
-  "description": "Angular (legacy) directive for SortableJS.",
+  "description": "Angular (legacy) directive for SortableJS. Oksidia fork.",
   "main": "angular-legacy-sortable.js",
   "scripts": {
     "serve:example": "node example/app.js",
